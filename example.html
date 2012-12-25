@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>UUID Example</title>
+		<meta charset="utf-8">
+		<script src="lib/parseTime.js"></script>
+	</head>
+	<body>
+		<script>
+			var dateObject = parseTime('9:45 AM');
+			document.write(dateObject + '<br/>');
+			document.write(isValidDate(dateObject) + '<br/><br/>')
+			
+			var nullObject = parseTime('');
+			document.write(nullObject + '<br/>');
+			document.write((nullObject === null) + '<br/><br/>')
+			
+			var invalidDateObject = parseTime('abc');
+			document.write(invalidDateObject + '<br/>');
+			document.write(isInvalidDate(invalidDateObject) + '<br/><br/>');
+		</script>
+	</body>
+</html>
