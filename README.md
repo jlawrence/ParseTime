@@ -22,18 +22,6 @@ See test/tests.html for the full list of supported time input formats.
 
 ## Usage ##
 
-### Step 1 ###
-
-Include the script.
-
-```html
-<head>
-	<script src="parseTime.js"></script>
-</head>
-```
-
-### Step 2 ###
-
 Call the function, passing in the string to parse.
 
 ```javascript
@@ -42,10 +30,11 @@ parseTime(''); // -> null
 parseTime('abc'); // -> Date object (Invalid Date)
 ```
 
-You can use the utility functions to detect invalid dates.
+You can use the utility functions to detect invalid dates and format the time.
 ```javascript
 isValidDate(parseTime('9:45 AM')); // -> true
 isInvalidDate(parseTime('abc')); // -> true
+dateToTimeString(parseTime('9am')); // => '9:00 AM'
 ```
 
 ## License ##

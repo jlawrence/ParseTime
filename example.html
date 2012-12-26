@@ -3,12 +3,13 @@
 	<head>
 		<title>ParseTime Example</title>
 		<meta charset="utf-8">
-		<script src="lib/parseTime.js"></script>
+		<script src="lib/parse-time-1.1.js"></script>
 	</head>
 	<body>
 		<script>
 			var dateObject = parseTime('9:45 AM');
 			document.write(dateObject + '<br/>');
+			document.write(dateToTimeString(dateObject) + '<br/>');
 			document.write(isValidDate(dateObject) + '<br/><br/>')
 			
 			var nullObject = parseTime('');
